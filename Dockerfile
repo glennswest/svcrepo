@@ -19,5 +19,6 @@ COPY svcrepo.sh /usr/src/app/
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY repo/ /usr/share/nginx/html/repo/
+RUN rm -r -f 
 RUN createrepo /usr/share/nginx/html/repo
 CMD ["bash","/usr/src/app/svcrepo.sh"]
